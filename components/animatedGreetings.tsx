@@ -52,7 +52,7 @@ export const AnimatedGreeting = () => {
           👋
         </span>{" "}
         <br />
-        I'm Edy Mikhael -{" "}
+        I&apos;m Edy Mikhael -{" "}
       </h1>
       <h1
         className={`${title()} text-5xl md:text-7xl lg:text-8xl leading-tight`}

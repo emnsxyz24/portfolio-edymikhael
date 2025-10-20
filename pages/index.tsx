@@ -76,10 +76,10 @@ export default function IndexPage() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-2/3 text-lg leading-relaxed">
               <p>
-                I'm Edy Mikhael Novrianta Surbakti, fresh graduate of computer
-                science from Mikroskil University, passionate in UI/UX design
-                and full-stack web development. I like transforming concepts
-                into useful and eye-catching digital experiences.
+                I&apos;m Edy Mikhael Novrianta Surbakti, fresh graduate of
+                computer science from Mikroskil University, passionate in UI/UX
+                design and full-stack web development. I like transforming
+                concepts into useful and eye-catching digital experiences.
               </p>
               <p className="mt-4">
                 I work to create effective, user-centered solutions using my
@@ -90,8 +90,8 @@ export default function IndexPage() {
               </p>
               <p className="mt-4">
                 I have a strong interest in lifelong learning and investigating
-                innovative technologies that enhance people's technological
-                interactions. I'm now open to full-time and internship jobs
+                innovative technologies that enhance people&apos;s technological
+                interactions. I&apos;m now open to full-time and internship jobs
                 where I can work with skilled individuals, share my abilities,
                 and advance as a developer.
               </p>
@@ -150,8 +150,8 @@ export default function IndexPage() {
       >
         <h2 className="text-4xl font-bold mb-8">Contact</h2>
         <p className="text-lg text-gray-400 mb-12 max-w-2xl">
-          Have questions or want to collaborate? Don't hesitate to Contact me.
-          I'm always open to discussion and new opportunities.
+          Have questions or want to collaborate? Don&apos;t hesitate to Contact me.
+          I&apos;m always open to discussion and new opportunities.
         </p>
 
         <form className="w-full max-w-2xl" onSubmit={handleSubmit}>
