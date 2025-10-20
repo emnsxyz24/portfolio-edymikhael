@@ -1,5 +1,11 @@
 @import "tailwindcss";
+*,body,html {
+  scroll-behavior: smooth !important;
+}
 
+html:focus-within{
+  scroll-behavior: smooth !important;
+}
 html.light body {
   background-color: #F0F0EC;
 }
