@@ -14,6 +14,21 @@ const config = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
+      animation: {
+        'fade-in-right': 'fade-in-right 0.5s ease-out',
+      },
+      keyframes: {
+        'fade-in-right': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(50px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0)',
+          },
+        },
+      },
     },
   },
   darkMode: "class",

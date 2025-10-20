@@ -1,6 +1,30 @@
 import * as React from "react";
+import Image from "next/image";
 
 import { IconSvgProps } from "@/types";
+import logoBlack from "@/public/assets/logo-black.png";
+import logoWhite from "@/public/assets/logo-white.png";
+
+export const MainLogo = ({ className }: { className?: string }) => {
+  return (
+    <div className={className}>
+      <Image
+        alt="Logo"
+        className="block dark:hidden"
+        height={32}
+        src={logoBlack}
+        width={32}
+      />
+      <Image
+        alt="Logo"
+        className="hidden dark:block"
+        height={32}
+        src={logoWhite}
+        width={32}
+      />
+    </div>
+  );
+};
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
@@ -88,6 +112,76 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
   );
 };
 
+export const LinkedinIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      height={size || height}
+      viewBox="0 0 1025 1024"
+      width={size || width}
+      {...props}
+    >
+      <path
+        d="M896.428 1024h-768q-53 0-90.5-37.5T.428 896V128q0-53 37.5-90.5t90.5-37.5h768q53 0 90.5 37.5t37.5 90.5v768q0 53-37.5 90.5t-90.5 37.5zm-640-864q0-13-9.5-22.5t-22.5-9.5h-64q-13 0-22.5 9.5t-9.5 22.5v64q0 13 9.5 22.5t22.5 9.5h64q13 0 22.5-9.5t9.5-22.5v-64zm0 192q0-13-9.5-22.5t-22.5-9.5h-64q-13 0-22.5 9.5t-9.5 22.5v512q0 13 9.5 22.5t22.5 9.5h64q13 0 22.5-9.5t9.5-22.5V352zm640 160q0-80-56-136t-136-56q-44 0-96.5 14t-95.5 39v-21q0-13-9.5-22.5t-22.5-9.5h-64q-13 0-22.5 9.5t-9.5 22.5v512q0 13 9.5 22.5t22.5 9.5h64q13 0 22.5-9.5t9.5-22.5V576q0-53 37.5-90.5t90.5-37.5t90.5 37.5t37.5 90.5v288q0 13 9.5 22.5t22.5 9.5h64q13 0 22.5-9.5t9.5-22.5V512z"
+        fill="#84818d"
+      />
+    </svg>
+  );
+};
+
+export const WhiteLinkedinIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      height={size || height}
+      viewBox="0 0 20 20"
+      width={size || width}
+      {...props}
+    >
+      <path
+        d="M17.04 17.043h-2.962v-4.64c0-1.107-.023-2.531-1.544-2.531c-1.544 0-1.78 1.204-1.78 2.449v4.722H7.793V7.5h2.844v1.3h.039c.397-.75 1.364-1.54 2.808-1.54c3.001 0 3.556 1.974 3.556 4.545v5.238ZM4.447 6.194c-.954 0-1.72-.771-1.72-1.72s.767-1.72 1.72-1.72a1.72 1.72 0 0 1 0 3.44Zm1.484 10.85h-2.97V7.5h2.97v9.543ZM18.521 0H1.476C.66 0 0 .645 0 1.44v17.12C0 19.355.66 20 1.476 20h17.042c.815 0 1.482-.644 1.482-1.44V1.44C20 .646 19.333 0 18.518 0h.003Z"
+        fill="#ffffff"
+      />
+    </svg>
+  );
+};
+
+export const InstagramIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      fill="#84818d"
+      height={size || height}
+      viewBox="0 0 14 14"
+      width={size || width}
+      {...props}
+    >
+      <g
+        fill="none"
+        stroke="#84818d"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M10.333 3.644a.25.25 0 1 1 0-.5m0 .5a.25.25 0 1 0 0-.5" />
+        <path d="M.858 3.431A2.573 2.573 0 0 1 3.431.858h6.862a2.573 2.573 0 0 1 2.573 2.573v6.862a2.573 2.573 0 0 1-2.573 2.573H3.43a2.573 2.573 0 0 1-2.573-2.573V3.43Z" />
+        <path d="M4.312 6.862a2.55 2.55 0 1 0 5.1 0a2.55 2.55 0 1 0-5.1 0" />
+      </g>
+    </svg>
+  );
+};
+
 export const MoonFilledIcon = ({
   size = 24,
   width,
@@ -132,28 +226,49 @@ export const SunFilledIcon = ({
   </svg>
 );
 
-export const HeartFilledIcon = ({
+export const ChevronDownIcon = ({
   size = 24,
   width,
   height,
   ...props
 }: IconSvgProps) => (
   <svg
-    aria-hidden="true"
-    focusable="false"
+    fill="#84818D"
     height={size || height}
-    role="presentation"
+    viewBox="0 0 16 16"
+    width={size || width}
+    {...props}
+  >
+    <g fill="#84818D">
+      <path d="M9 7.826V1H7v6.826L4.392 5.59L3.09 7.108L8 11.318l4.91-4.21l-1.302-1.518z" />
+      <path d="M3 13v-3H1v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3h-2v3z" />
+    </g>
+  </svg>
+);
+
+export const MailIcon = ({
+  size = 22,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
+  <svg
+    fill="#84818D"
+    height={size || height}
     viewBox="0 0 24 24"
     width={size || width}
     {...props}
   >
-    <path
-      d="M12.62 20.81c-.34.12-.9.12-1.24 0C8.48 19.82 2 15.69 2 8.69 2 5.6 4.49 3.1 7.56 3.1c1.82 0 3.43.88 4.44 2.24a5.53 5.53 0 0 1 4.44-2.24C19.51 3.1 22 5.6 22 8.69c0 7-6.48 11.13-9.38 12.12Z"
-      fill="currentColor"
+    <g
+      fill="none"
+      stroke="#84818D"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={1.5}
-    />
+      strokeWidth="2"
+    >
+      <rect height="16" rx="2" width="20" x="2" y="4" />
+      <path d="m22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </g>
   </svg>
 );
 
