@@ -6,35 +6,25 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@heroui/navbar";
-import { Button } from "@heroui/button";
-import { Alert } from "@heroui/alert";
 import { Link } from "@heroui/link";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { ChevronDownIcon, MainLogo } from "@/components/icons";
 
 export const Navbar = () => {
-  const [showAlert, setShowAlert] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
+  const downloadResume = () => {
+    const element = document.createElement("a");
+    const file = new Blob();
 
-    if (showAlert) {
-      timer = setTimeout(() => {
-        setShowAlert(false);
-      }, 3000);
-    }
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [showAlert]);
+    element.href = URL.createObjectURL(file);
+  };
 
   return (
     <HeroUINavbar
@@ -79,24 +69,14 @@ export const Navbar = () => {
             <ThemeSwitch />
           </div>
           <div className="hidden md:flex">
-            <Button
-              className="text-base font-normal text-default-600 shadow-2xl w-full rounded-lg bg-white/10 px-5 py-2"
-              href={"mailto:officialedymikhael@gmail.com"}
-              startContent={<ChevronDownIcon className="text-danger w-6 h-6" />}
-              variant="flat"
-              onPress={() => setShowAlert(true)}
+            <a
+              className="flex items-center gap-2 text-base font-normal text-default-600 shadow-lg border border-default-400 dark:border-default-200 rounded-lg bg-white/5 dark:bg-black/10 px-5 py-2 transition-colors hover:bg-white/10 dark:hover:bg-black/20"
+              download="EdyMikhael_Resume.pdf"
+              href="/assets/CV_Edy_Mikhael_Novrianta_Surbakti.pdf"
             >
+              <ChevronDownIcon className="w-5 h-5" />
               Download Resume
-            </Button>
-            {showAlert && (
-              <div className="fixed bottom-5 right-5 z-50 animate-fade-in-right">
-                <Alert
-                  description="lagi diedit nih resume nya, sabar yaa"
-                  title="Sabar yakk"
-                  onClose={() => setShowAlert(false)}
-                />
-              </div>
-            )}
+            </a>
           </div>
           <div className="sm:hidden flex items-center gap-3">
             <ThemeSwitch />

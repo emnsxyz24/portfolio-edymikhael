@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 
@@ -11,8 +11,8 @@ gsap.registerPlugin(SplitText);
 export const AnimatedGreeting = () => {
   const textRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
-    let split: SplitText;
+  useEffect(() => {
+    let split: SplitText | undefined;
 
     const initAnimation = async () => {
       await document.fonts.ready;
