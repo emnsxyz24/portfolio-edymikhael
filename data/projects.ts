@@ -21,7 +21,7 @@ export const projectsData = [
       "Application for a coffee shop that includes features such as menu browsing, order placement, and inventory management.",
     imageSrc: "/assets/projects/kedaiimaji.png",
     technologies: ["Flask", "MongoDB"],
-    link: "https://github.com/emnsxyz24/MSIB-task-coffeeshop",
+    link: "https://last-project-fxi5.vercel.app/",
   },
   {
     title: "Portfolio",
