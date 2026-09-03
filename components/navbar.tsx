@@ -72,7 +72,7 @@ export const Navbar = () => {
             <a
               className="flex items-center gap-2 text-base font-normal text-default-600 shadow-lg border border-default-400 dark:border-default-200 rounded-lg bg-white/5 dark:bg-black/10 px-5 py-2 transition-colors hover:bg-white/10 dark:hover:bg-black/20"
               download="EdyMikhael_Resume.pdf"
-              href="/assets/CV_Edy_Mikhael_Novrianta_Surbakti.pdf"
+              href="https://drive.google.com/uc?export=download&id=1EIf4Ythw8-qi9u_hi80gl_xLr9-EN3IA"
             >
               <ChevronDownIcon className="w-5 h-5" />
               Download Resume
